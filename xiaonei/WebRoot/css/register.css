@@ -1,0 +1,65 @@
+/*注册主体框*/
+.reg_main_frame{
+	width: 1000px;
+	height: 700px;
+	margin: 0 auto;
+}
+
+/*加入后可以选择的功能*/
+.play_item {
+	width: 270px;
+/*	height: 700px;*/
+	float: left;
+}
+
+.play_item img{
+	float: right;
+}
+
+/*注册用的表格div*/
+.reg_table1{
+	width: 725px;
+	margin-left: 5px;
+/*	height: 700px;*/
+	float: left;
+}
+
+.reg_table1 table{
+	width: 700px;
+	line-height: 30px;
+}
+
+/*对注册表格的外观进行控制*/
+.tab_td1{
+	width: 120px;
+	text-align: right;
+	font-size: 12px;
+	font-weight: bold;
+	color: #808080;
+	padding-right: 5px;
+}
+
+.tabl_td2{
+	width: 200px;
+	text-align: left;
+	font-size: 12px;
+	font-weight: bold;
+	color: #808080;
+	padding-left: 0px;
+}
+
+/*控制显示和不显示*/
+.spe_graduate, .spe_worker {
+	display: none;
+}
+
+/*学校选择控件*/
+.divSch {
+	background-color: white;
+	border-style: solid;
+	position: absolute;
+	top: 430;
+	left: 400;
+	border-color: #D8DFEA;
+	border-width: 12px;
+}

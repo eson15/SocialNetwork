@@ -1,0 +1,38 @@
+.head{
+	height: 101px;
+	width: 1000px;
+	background-color: #3B5888;
+	margin: 2 auto;  //表示左右居中，上下边距5
+}
+
+.head .img1{
+	width: 713px;
+	height: 65px;
+	float: left;
+}
+
+.head .img2{
+	width: 287px;
+	height: 65px;
+	float: left;
+}
+
+.head .img3{
+	height: 33px;
+	float: left;
+}
+
+.navi1 {
+	float: right;
+	height: 33px;
+}
+
+.navi1 a{
+	float: left;
+	list-style-type: none;
+	color: #C3CDDF;
+	width: 55px;
+	line-height: 33px;
+	text-align: center;
+}
+

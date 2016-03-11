@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Struts2Diagram version="2.0">
+  <package name="test" location="186,154" size="280,210">
+    <action name="test" location="67,63" size="150,46">
+      <result name="success">
+        <resourceEdge source="success" routing="0" target="showCountry.jsp" />
+      </result>
+    </action>
+  </package>
+  <webResource name="showCountry.jsp" path="/test/showCountry.jsp" location="502,406" size="150,55" />
+</Struts2Diagram>
+

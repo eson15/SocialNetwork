@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+	"http://struts.apache.org/dtds/struts-2.3.dtd">
+
+<struts>
+	<constant name="struts.multipart.saveDir" value="/images" />
+    <constant name="struts.enable.DynamicMethodInvocation" value="true" />
+    <constant name="struts.devMode" value="false" />
+
+    <package name="test" namespace="/test" extends="struts-default">
+        <action name="testAction" class="com.xiaonei.web.action.TestAction">
+            <result name="success">/WEB-INF/test/showCountry.jsp</result>
+        </action>
+    </package>
+    
+    <package name="register" namespace="/register" extends="struts-default">
+        <action name="registerAction" class="com.xiaonei.web.action.RegisterAction" method="register">
+            <result name="success">/WEB-INF/self/home.jsp</result>
+        </action>
+        
+        <action name="register" class="com.xiaonei.web.action.RegisterAction" method="preRegister">
+            <result name="success">/WEB-INF/public/register.jsp</result>
+        </action>
+    </package>
+    
+	<package name="profile" namespace="/profile" extends="struts-default">
+        <action name="homepage" class="com.xiaonei.web.action.ProfileAction" method="goHomePage">
+            <result name="success">/WEB-INF/self/homePage.jsp</result>
+        </action>
+        <action name="newspage" class="com.xiaonei.web.action.ProfileAction" method="goNewsPage">
+            <result name="success">/WEB-INF/self/home.jsp</result>
+        </action>
+        
+        <action name="login" class="com.xiaonei.web.action.ProfileAction" method="login">
+            <result name="success">/WEB-INF/self/home.jsp</result>
+            <result name="fail">/WEB-INF/public/index.jsp</result>
+        </action>
+        
+        <action name="logout" class="com.xiaonei.web.action.ProfileAction" method="logout">
+            <result name="success">/WEB-INF/public/index.jsp</result>
+        </action>
+        
+        <action name="uploadphotoUI" class="com.xiaonei.web.action.ProfileAction" method="uploadPhotoUI">
+            <result name="success">/WEB-INF/self/uploadHeadPhoto.jsp</result>
+        </action>
+        
+        <action name="uploadphoto" class="com.xiaonei.web.action.ProfileAction" method="uploadPhoto">
+            <result name="success">/WEB-INF/self/homePage.jsp</result>
+            <result name="fail">/WEB-INF/self/uploadHeadPhoto.jsp</result>
+        </action>
+    </package>
+    
+    <package name="album" namespace="/album" extends="struts-default">
+        <action name="albumUI" class="com.xiaonei.web.action.AlbumAction" method="goAlbumUI">
+            <result name="success">/WEB-INF/self/myAlbum.jsp</result>
+        </action>
+        
+        <action name="addAlbumUI" class="com.xiaonei.web.action.AlbumAction" method="addAlbumUI">
+            <result name="success">/WEB-INF/self/addOrChoiceAlblum.jsp</result>
+        </action>
+        
+        <action name="addAlbum" class="com.xiaonei.web.action.AlbumAction" method="addAlbum">
+            <result name="success">/WEB-INF/self/addPhoto.jsp</result>
+            <result name="fail">/WEB-INF/self/addOrChoiceAlblum.jsp</result>
+        </action>
+        
+        <action name="addPhoto" class="com.xiaonei.web.action.AlbumAction" method="addPhoto">
+            <result name="success">/WEB-INF/self/oneAlbum.jsp</result>
+        </action>
+        
+        <action name="oneAlbum" class="com.xiaonei.web.action.AlbumAction" method="goOneAlbum">
+            <result name="success">/WEB-INF/self/oneAlbum.jsp</result>
+        </action>
+        <!-- 再该 -->
+        <action name="onePhotoUI" class="com.xiaonei.web.action.AlbumAction" method="onePhotoUI">
+            <result name="success">/WEB-INF/self/onePhoto.jsp</result>
+        </action>
+    </package>
+    <!-- Add packages here -->
+
+</struts>
